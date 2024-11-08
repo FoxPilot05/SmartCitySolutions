@@ -1,0 +1,11 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<body>
+    <label for="plz">Post Code:</label><br>
+    <input type="text" id="plz" name="plz"><br>
+    <br>
+    <input id="submit" type="button" value="Submit" onclick=calcPostCode() />
+    <br>
+    <script src="{{ url_for('static', filename='js/postcode.js') }}"></script>
+    <br>
+    <span id="span"> No Post Code Submitted </span>
+</body>
