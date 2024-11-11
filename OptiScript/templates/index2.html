@@ -45,7 +45,7 @@
             border: 2px solid #ddd;
             border-radius: 4px;
             outline: none;
-            box-sizing: border-box;
+            box-sizing: border-box; 
         }
         input[type="text"]:focus {
             border-color: #6c63ff;
@@ -88,7 +88,7 @@
         <h1>Submit Your Post Code</h1>
         <div class="form-group">
             <label for="plz">Post Code:</label>
-            <input type="text" id="plz" name="plz" placeholder="Enter your post code">
+            <input type="text" id="plz" name="plz" placeholder="Enter your post code" maxlength="5">
         </div>
         <input id="submit" type="button" value="Submit" onclick="calcPostCode()">
         <span id="span">No Post Code Submitted</span>
