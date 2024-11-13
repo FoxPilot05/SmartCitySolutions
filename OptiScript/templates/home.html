@@ -33,6 +33,24 @@
             box-sizing: border-box;
             border-radius: 0 0 12px 12px;
         }
+        .about-us-button {
+            background-color: #5751e0; /* Button color similar to header hover */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            margin-left: auto; /* Push it to the right */
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }   
+
+        .about-us-button:hover {
+            background-color: #4e45d3;
+            transform: translateY(-2px);
+        }
+
         .logo {
             width: 50px;
             height: auto;
@@ -126,6 +144,7 @@
     <div class="header">
         <img src="pictures/Logo.jpg" alt="Logo" class="logo">
         <span class="title">Smart City Solutions</span>
+        <button class="about-us-button" onclick="window.location.href='/about'">About Us</button>
     </div>
 
     <div class="container">

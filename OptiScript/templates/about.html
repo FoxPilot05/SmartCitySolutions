@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #e9f0ff, #f7f7f7);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .header {
+            display: flex;
+            align-items: center;
+            padding: 20px 30px;
+            background-color: #6c63ff;
+            color: white;
+            width: 100%;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            position: absolute;
+            top: 0;
+            left: 0;
+            box-sizing: border-box;
+            border-radius: 0 0 12px 12px;
+        }
+        .logo {
+            width: 50px;
+            height: auto;
+            margin-right: 15px;
+        }
+        .title {
+            font-size: 22px;
+            font-weight: 700;
+            color: #fff;
+        }
+        .about-us-button {
+            background-color: #5751e0;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            margin-left: auto;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .about-us-button:hover {
+            background-color: #4e45d3;
+            transform: translateY(-2px);
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 850px;
+            text-align: left;
+            margin-top: 160px;
+            border: 1px solid #e0e0e0;
+            transition: transform 0.3s ease;
+        }
+
+        .container:hover {
+            transform: scale(1.02);
+        }
+        
+        h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 32px;
+            color: #333;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 30px;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+        }
+
+        .icon {
+            width: 40px;
+            height: auto;
+            margin-right: 12px;
+            vertical-align: middle;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+            font-size: 20px;
+            color: #6c63ff;
+            font-weight: 500;
+        }
+
+        .section-header::before {
+            content: '';
+            width: 30px;
+            height: 2px;
+            background-color: #6c63ff;
+            margin-right: 12px;
+        }
+
+        footer {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #777;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <img src="pictures/Logo.jpg" alt="Logo" class="logo">
+        <span class="title">Smart City Solutions</span>
+        <!-- About Us Button -->
+        <button class="about-us-button" onclick="window.location.href='/'">Home</button>
+    </div>
+
+    <div class="container">
+        <h1>About Us</h1>
+        <div class="section-header">
+            <img src="https://img.icons8.com/ios/452/organization.png" alt="About Us Icon" class="icon">
+            <span>Our Mission</span>
+        </div>
+        <p>
+            At Smart City Solutions, we are a forward-thinking IT company founded in the dynamic and historically rich city of Magdeburg, Germany. Our core mission is to revolutionize urban living through innovative and sustainable Internet of Things (IoT) technologies designed specifically for cities and communities. We are dedicated to improving the lives of people in urban environments by integrating smart technologies that make cities more efficient, sustainable, and connected.
+        </p>
+
+        <div class="section-header">
+            <img src="https://img.icons8.com/ios/452/technology.png" alt="Technology Icon" class="icon">
+            <span>Our Expertise</span>
+        </div>
+        <p>
+            With expertise in the IoT space, our team specializes in developing and deploying smart infrastructure solutions that enhance transportation, environmental monitoring, energy efficiency, and public safety. We focus on creating long-term, scalable solutions that not only address today’s challenges but also anticipate tomorrow’s needs. Our IoT systems are designed to integrate seamlessly with existing urban frameworks, providing real-time data and actionable insights for both residents and local governments.
+        </p>
+
+        <div class="section-header">
+            <img src="https://img.icons8.com/ios/452/connected.png" alt="Connectivity Icon" class="icon">
+            <span>Our Vision</span>
+        </div>
+        <p>
+            We envision a future where every city becomes a smart city—empowered by technology that enhances sustainability, fosters collaboration, and improves the quality of life for all citizens. Our goal is to lead the way in IoT-driven urban transformation, enabling cities to adapt to the changing needs of their inhabitants while minimizing their environmental footprint. By leveraging IoT technology, we aim to create vibrant, connected communities that are not only smart but also sustainable and inclusive.
+        </p>
+
+    </div>
+
+    <footer>
+        &copy; 2024 Smart City Solutions. All rights reserved.
+    </footer>
+
+</body>
+</html>
