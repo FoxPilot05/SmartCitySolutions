@@ -34,13 +34,13 @@
             box-sizing: border-box;
             border-radius: 0 0 12px 12px;
         }
-        
+
         .logo {
             width: 50px;
             height: auto;
             margin-right: 15px;
         }
-        
+
         .title {
             font-size: 22px;
             font-weight: 700;
@@ -49,8 +49,9 @@
 
         .result-container {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: space-between;
+            justify-content: center;
             width: 100%;
             max-width: 600px;
             margin-top: 150px;
@@ -65,7 +66,7 @@
             font-size: 24px;
             font-weight: 500;
             color: #333;
-            flex: 1;
+            margin-bottom: 20px;
         }
 
         .info-box {
@@ -76,17 +77,42 @@
             font-size: 16px;
             font-weight: 500;
             text-align: center;
-            width: 120px;
+            width: 150px;
             display: flex;
             flex-direction: column;
             align-items: center;
+            margin-bottom: 20px;
         }
 
         .percentage {
             font-size: 20px;
             font-weight: 700;
         }
-        
+
+        .sensors {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            max-width: 400px;
+            margin-top: 20px;
+        }
+
+        .sensor-box {
+            text-align: center;
+            font-size: 16px;
+            color: #333;
+            background-color: #f0f0ff;
+            padding: 15px;
+            border-radius: 8px;
+            width: 120px;
+        }
+
+        .sensor-value {
+            font-size: 20px;
+            font-weight: 700;
+            color: #6c63ff;
+        }
+
         .back-button {
             margin-top: 30px;
             background-color: #6c63ff;
@@ -120,18 +146,40 @@
         <div class="info-box">
             <span class="percentage" id="percentage">--%</span>
         </div>
+        
+        <!-- Sensor details section -->
+        <div class="sensors">
+            <div class="sensor-box">
+                <span>Cameras</span>
+                <div class="sensor-value" id="cameras">0</div>
+            </div>
+            <div class="sensor-box">
+                <span>IR Sensors</span>
+                <div class="sensor-value" id="irSensors">0</div>
+            </div>
+            <div class="sensor-box">
+                <span>Other Sensors</span>
+                <div class="sensor-value" id="otherSensors">0</div>
+            </div>
+        </div>
     </div>
 
     <a href="/" class="back-button">Back to Home</a>
 
     <script>
-        // Retrieve postcode and percentage result from sessionStorage
+        // Retrieve postcode, percentage result, and sensor data from sessionStorage
         const postcodeResult = sessionStorage.getItem("postcodeResult");
         const percentageResult = sessionStorage.getItem("percentageResult");
+        const cameras = sessionStorage.getItem("cameras");
+        const irSensors = sessionStorage.getItem("irSensors");
+        const otherSensors = sessionStorage.getItem("otherSensors");
 
         // Display the retrieved results
         document.getElementById("postcode").textContent = postcodeResult || "No postcode available";
         document.getElementById("percentage").textContent = percentageResult ? `${percentageResult}%` : "--%";
+        document.getElementById("cameras").textContent = cameras || "0";
+        document.getElementById("irSensors").textContent = irSensors || "0";
+        document.getElementById("otherSensors").textContent = otherSensors || "0";
     </script>
 </body>
 </html>

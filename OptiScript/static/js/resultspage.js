@@ -17,9 +17,21 @@ function calcPostCode() {
         optimizability = (optimizability * 100) % 36;
         let resultText = `Area of Postcode ${postCode} can be optimized by ${optimizability.toFixed(2)} Percent.`;
 
-        // Store result in sessionStorage
+        // Calculate sensor requirements inversely based on optimizability
+        const maxSensors = 20; // Example maximum number of sensors for lowest optimizability
+        const minSensors = 2;  // Minimum number of sensors for highest optimizability
+
+        // Calculate the number of each type of sensor inversely
+        const cameras = Math.floor(maxSensors - (optimizability / 36) * (maxSensors - minSensors));
+        const irSensors = Math.floor((maxSensors - 5) - (optimizability / 36) * ((maxSensors - 5) - minSensors));
+        const otherSensors = Math.floor((maxSensors - 10) - (optimizability / 36) * ((maxSensors - 10) - minSensors));
+
+        // Store results in sessionStorage
         sessionStorage.setItem("postcodeResult", `Postcode ${postCode}`);
         sessionStorage.setItem("percentageResult", optimizability.toFixed(2));
+        sessionStorage.setItem("cameras", cameras);
+        sessionStorage.setItem("irSensors", irSensors);
+        sessionStorage.setItem("otherSensors", otherSensors);
 
         // Redirect to the new page
         window.location.href = "/newpage"; // Ensure "/newpage" is the actual path
