@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result Page</title>
+</head>
+<body>
+    <div id="result-container">
+        <p id="result"></p>
+    </div>
+
+    <script>
+        // Retrieve the result from sessionStorage and display it
+        const resultText = sessionStorage.getItem("postcodeResult");
+        const resultElement = document.getElementById("result");
+
+        if (resultText) {
+            resultElement.textContent = resultText;
+        } else {
+            resultElement.textContent = "No result available.";
+        }
+    </script>
+</body>
+</html>
